@@ -1,7 +1,7 @@
 ### MILESTONE 1
 
-- Stampare all'interno di una lista, un item per ogni todo.
-- Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
+- [x] Stampare all'interno di una lista, un item per ogni todo.
+- [x] Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 ### MILESTONE 2
 
@@ -9,7 +9,7 @@
 
 ##### Bonus:
 
-1. [ ] Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista (cercate nella documentazione l'evento che vi serve per questo bonus);
-2. [ ] Cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente ed eventuale icona (se done era uguale a false, impostare true e viceversa);
-3. [ ] Visualizzare a fianco ad ogni item una "x": cliccando su di essa, il todo viene rimosso dalla lista;
+1. [x] Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista (cercate nella documentazione l'evento che vi serve per questo bonus);
+2. [x] Cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente ed eventuale icona (se done era uguale a false, impostare true e viceversa);
+3. [x] Visualizzare a fianco ad ogni item una "x": cliccando su di essa, il todo viene rimosso dalla lista;
 4. [ ] Implementare la persistenza di dati tramite local storage, quindi all'avvio dell'applicazione prendere i dati salvati per renderizzarli in pagina e ad ogni cambiamento aggiornare i dati salvati.
