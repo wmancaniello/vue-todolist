@@ -7,10 +7,10 @@ createApp({
   data() {
     return {
       todos: [
-        { text: "Recruiting blog post", done: true },
-        { text: "Mobile app launch", done: true },
-        { text: "Interview John H.", done: true },
-        { text: "Summit update to mobile storefronts", done: false },
+        { text: "Articolo del blog sul reclutamento", done: true },
+        { text: "Lancio dell'applicazione mobile", done: true },
+        { text: "Intervista a John H.", done: true },
+        { text: "Aggiornamento del summit alle vetrine mobili", done: false },
       ],
       newTodoText: "",
     };
