@@ -125,7 +125,7 @@ li .circle::before {
 }
 
 li.done {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 li .circle.checked::before {
@@ -172,3 +172,11 @@ li .circle.delete::before {
   background-color: #a3d116;
 }
 
+/* Aggiunta, unico problema , non so come togliere lo "sbarramento quando un todo è stato completato, il problema potrebbe essere il ciclo v-for? */
+
+.remove-icon {
+  color: red;
+  font-size: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}

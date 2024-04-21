@@ -5,39 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toboolist</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <img id="logo" src="img/logo.png" alt="logo boolean" />
-      <span id="logo-text">Toboolist</span>
-    </header>
-    <main>
-      <div class="container">
-        <div class="top">
-          <input type="text" placeholder="es: Fare la spesa..." />
-          <button type="button" class="btn btn-filled">Add Task</button>
+    <!-- HTML -->
+    <div id="app">
+      <header>
+        <img id="logo" src="img/logo.png" alt="logo boolean" />
+        <span id="logo-text">Toboolist</span>
+      </header>
+      <main>
+        <div class="container">
+          <div class="top">
+            <!-- Aggiungo il v-model per collegare l'input al condizionale newTodoText specificato in nello script VUE-->
+            <input
+              type="text"
+              v-model="newTodoText"
+              placeholder="es: Fare la spesa..."
+            />
+            <!-- Aggiungo il @click per richiamare la funzione addTodo -->
+            <button type="button" class="btn btn-filled" @click="addTodo">
+              Add Task
+            </button>
+          </div>
+          <div class="tasks">
+            <ul class="inner-list">
+              <!-- Ciclo v-for -->
+              <li
+                v-for="(todo, index) in todos"
+                :key="index"
+                :class="{ 'done': todo.done }"
+                @click="toggleTodo(index)"
+              >
+                <!-- Aggiungo :class per aggiungere la classe 'checked' -->
+                <span class="circle" :class="{ 'checked': todo.done }"></span>
+                <span> {{ todo.text }} </span>
+
+                <!-- Aggiungo "x" per rimuovere il todo -->
+                <span class="remove-icon" @click="removeTodo(index)">x</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="tasks">
-              <ul class="inner-list">
-                <li class="done">
-                  <span class="circle checked"></span>Recruiting blog post
-                </li>
-                <li class="done">
-                  <span class="circle checked"></span>Mobile app luaunch
-                </li>
-                <li>
-                  <span class="circle delete"></span>Interview John H.
-                </li>
-                <li class="done">
-                  <span class="circle checked"></span>Summit update to mobile
-                  storefronts 
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
