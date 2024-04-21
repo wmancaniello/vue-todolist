@@ -175,8 +175,9 @@ li .circle.delete::before {
 /* Aggiunta, unico problema , non so come togliere lo "sbarramento quando un todo è stato completato, il problema potrebbe essere il ciclo v-for? */
 
 .remove-icon {
+  display: flex;
   color: red;
   font-size: 20px;
-  margin-left: 50px;
+  justify-content:flex-end;
   cursor: pointer;
 }
