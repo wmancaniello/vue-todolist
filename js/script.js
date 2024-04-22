@@ -24,6 +24,9 @@ createApp({
         this.todos.push({ text: this.newTodoText, done: false });
         // Ripulisco l'area di testo
         this.newTodoText = "";
+      } else {
+        this.newTodoText === "";
+        alert("Errore! Campo vuoto, inserire qualcosa.");
       }
     },
     // Funzione per invertire true e false
